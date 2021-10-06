@@ -7,18 +7,17 @@ import {
   Text, 
   Alert,
  } from 'react-native';
+ import { AntDesign } from '@expo/vector-icons';
 
 const App = () => {
   return(
-  <SafeAreaView style={styles.container}>
-    <View>
+  <SafeAreaView style={styles.container} >
          <TouchableOpacity
         style={styles.button}
         onPress={() => Alert.alert('これはアラートちなってぃね')}
       >
-        <Text>これはボタンです</Text>
+        <AntDesign name="pluscircle" size={80} color="#663700" />
       </TouchableOpacity>
-    </View>
   </SafeAreaView>
   )
 };
@@ -33,11 +32,15 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     marginVertical: 8,
   },
-  button:{
-    alignItems: "center",
-    backgroundColor: "#DDDDDD",
-    padding: 10
-  
+  button: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    width:80,
+    height: 80,
+    position: 'absolute',
+    right: 16,
+    bottom: 16,
+    borderRadius:50,
   }
 });
 
