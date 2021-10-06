@@ -1,21 +1,44 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { 
+  StyleSheet, 
+  TouchableOpacity, 
+  View, 
+  SafeAreaView, 
+  Text, 
+  Alert,
+ } from 'react-native';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>イガちゃんも好き</Text>
-      <StatusBar style="auto" />
+const App = () => {
+  return(
+  <SafeAreaView style={styles.container}>
+    <View>
+         <TouchableOpacity
+        style={styles.button}
+        onPress={() => Alert.alert('これはアラートちなってぃね')}
+      >
+        <Text>これはボタンです</Text>
+      </TouchableOpacity>
     </View>
-  );
-}
+  </SafeAreaView>
+  )
+};
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
     justifyContent: 'center',
+    marginHorizontal: 16,
   },
+  title: {
+    textAlign: 'center',
+    marginVertical: 8,
+  },
+  button:{
+    alignItems: "center",
+    backgroundColor: "#DDDDDD",
+    padding: 10
+  
+  }
 });
+
+export default App;
